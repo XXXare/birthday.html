@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: lightblue;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 10;
+        }
+
+        h1 {
+            color: red;
+            font-size: 50px;
+            margin-bottom: 20px;
+            animation: bounce 1s infinite;
+        }
+
+        p {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .balloons {
+            position: absolute;
+            bottom: -100px;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 5;
+        }
+
+        .balloon {
+            position: absolute;
+            bottom: -150px;
+            background-color: #ff6699;
+            width: 50px;
+            height: 60px;
+            border-radius: 50%;
+            animation: float 10s infinite;
+            box-shadow: 2px 10px 5px rgba(0,0,0,0.2);
+        }
+
+        .balloon:nth-child(1) {
+            left: 10%;
+            animation-duration: 6s;
+        }
+
+        .balloon:nth-child(2) {
+            left: 25%;
+            animation-duration: 8s;
+        }
+
+        .balloon:nth-child(3) {
+            left: 40%;
+            animation-duration: 7s;
+        }
+
+        .balloon:nth-child(4) {
+            left: 55%;
+            animation-duration: 6s;
+        }
+
+        .balloon:nth-child(5) {
+            left: 70%;
+            animation-duration: 9s;
+        }
+
+        .balloon:nth-child(6) {
+            left: 85%;
+            animation-duration: 7s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-1000px);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Happy Birthday, Putri Sayangku♡<h1>
+        <p>Semoga panjang umur, sehat selalu, dan mudah rezekinya!</p>
+        <p>Dengan cinta, <strong>Kasihku</strong></p>
+    </div>
+
+    <div class="balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+
+    <audio id="birthdaySong" autoplay loop>
+        <source src="https://www.fesliyanstudios.com/play-mp3/387" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Function to control audio
+        const audio = document.getElementById('birthdaySong');
+        audio.volume = 0.2; // Adjust volume
+    </script>
+
+</body>
+</html>
